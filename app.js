@@ -39,7 +39,7 @@ function create (env, ctx) {
           , includeSubDomains: includeSubDomainsValue
           , preload: preloadValue
         }
-        //, frameguard: false
+        , frameguard: false
         , contentSecurityPolicy: enableCSP
       }));
 
@@ -72,8 +72,8 @@ function create (env, ctx) {
             , baseUri: ["'none'"] // Restricts use of the <base> tag
             , formAction: ["'self'"] // Restricts where <form> contents may be submitted
             , connectSrc: ["'self'", "ws:", "wss:", 'https://fonts.googleapis.com/', 'https://fonts.gstatic.com/']
-            //, frameSrc: ["'self'"]
-            //, frameAncestors: frameAncestors
+            , frameSrc: ["'self'"]
+            , frameAncestors: frameAncestors
           }
           , reportOnly: secureCspReportOnly
         }));
